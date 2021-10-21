@@ -1,13 +1,107 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: helvetica, sans-serif;
+  background-color: gainsboro;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* header */
+
+.header {
+  background-image: linear-gradient(to top, #152531, #434c51, #152531);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerUserInfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d1f0ce;
+  margin-left: 2em;
+}
+
+.headerUserInfoContainer p {
+  margin-left: 1em;
+}
+
+.userIcon {
+  height: 30px;
+}
+
+.HeaderButtonContainer {
+  margin-right: 20px;
+}
+
+.headerButton {
+  color: #000;
+  background-color: #faf6f6;
+  border-color: #faf6f6;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 5px;
+}
+
+.headerButton:first-child {
+  width: 10em;
+}
+
+/* clock */
+
+.timerContainer {
+  display: flex;
+  color: #d1f0ce;
+}
+
+.clockIcon {
+  width: 30px;
+  margin-right: 1em;
+}
+
+/* task header */
+
+.taskHeader {
+  width: 90%;
+  border-radius: 13px;
+  background-color: white;
+  margin-top: 2em;
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: center;
+  background-color: gainsboro;
+}
+
+.taskContainer p,
+.taskContainer h1 {
+  margin-left: 2rem;
+}
+
+/* task box */
+
+.taskFile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border-radius: 13px;
+  background-image: linear-gradient(to top, #fff, #dde3ee);
+  margin: 0 2em;
+}
+
+.taskFile img {
+  width: 35em;
+}
+
+.taskFileAndForm {
+  display: flex;
+  justify-content: center;
+  margin-top:2em;
+  /* width:80% */
+}
+
+.taskForm {
+    margin: 0 2em;
 }
