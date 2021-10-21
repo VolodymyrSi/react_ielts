@@ -3,7 +3,7 @@ import TaskContainer from './components/TaskContainer';
 
 function App() {
   return (
-    <div>
+    <div className="body">
       <Header />
       <TaskContainer />
     </div>

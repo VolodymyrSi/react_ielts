@@ -1,6 +1,6 @@
 body {
   font-family: helvetica, sans-serif;
-  background-color: gainsboro;
+  background-color: #e0e6f0;
 }
 
 /* header */
@@ -66,12 +66,13 @@ body {
   border-radius: 13px;
   background-color: white;
   margin-top: 2em;
+  box-shadow: 0 0.0714em 0.214em rgb(0 0 0 / 25%);
+
 }
 
 .taskContainer {
   display: flex;
   justify-content: center;
-  background-color: gainsboro;
 }
 
 .taskContainer p,
@@ -98,10 +99,56 @@ body {
 .taskFileAndForm {
   display: flex;
   justify-content: center;
-  margin-top:2em;
+  margin-top: 2em;
+  background-image: linear-gradient(to top, #fff, #dde3ee);
+  margin-left: 2em;
+  margin-right: 2em;
+  box-shadow: 0 0.0714em 0.214em rgb(0 0 0 / 25%);
+  border-radius: 8px;
+
   /* width:80% */
 }
 
 .taskForm {
-    margin: 0 2em;
+  margin: 0 2em;
+}
+
+/* nav */
+
+.navFlexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.navigationContainer {
+  width: 60%;
+  display: flex;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+  border-radius: 8px;
+  padding: 0px 10px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.navigationButtonContainer {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+}
+
+.navigationButton {
+  height: 35px;
+  width: 35px;
+  border: none;
+  padding: 0;
+  background-color: #565656;
+  border-radius: 0.25rem;
+  margin-left: 0.5em;
+  margin-right: 1em;
+  font-weight: bolder;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
 }
