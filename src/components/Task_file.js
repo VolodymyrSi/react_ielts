@@ -4,11 +4,12 @@ function TaskFile(props) {
   return (
     <div className="taskFile">
       <p>{props.task}</p>
-
-      <img
-        src={task1SamplePicture}
-        alt="if you do not see this, please contact admins"
-      />
+      {props.number == 1 && (
+        <img
+          src={task1SamplePicture}
+          alt="if you do not see this, please contact admins"
+        />
+      )}
     </div>
   );
 }

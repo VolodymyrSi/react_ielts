@@ -67,7 +67,6 @@ body {
   background-color: white;
   margin-top: 2em;
   box-shadow: 0 0.0714em 0.214em rgb(0 0 0 / 25%);
-
 }
 
 .taskContainer {
@@ -90,6 +89,8 @@ body {
   border-radius: 13px;
   background-image: linear-gradient(to top, #fff, #dde3ee);
   margin: 0 2em;
+  min-width: 40%;
+  max-width: 40%;
 }
 
 .taskFile img {
@@ -111,6 +112,15 @@ body {
 
 .taskForm {
   margin: 0 2em;
+  min-width: 45%;
+}
+
+.textarea {
+  display: block;
+  min-width: 100%;
+  min-height: 600px;
+  margin: 1em 0;
+
 }
 
 /* nav */
