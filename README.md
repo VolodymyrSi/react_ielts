@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# _this project is under development_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+>### Background:
+>Millions of people take IELTS English test every year. One section on the test is writing, where the examinees are expected to type up 2 texts on a >computer. There is a special app which provides the tasks and to candidates and enables them to input their answers.
 
-## Available Scripts
+### The problem:
+This program is unique in a way that it is not similar to any text editor test takers are used to from their computer experience (Google docs, Ms words, others). Therefore, it is quite a challenge on its own to feel confident working in an alien environment let alone taking a test in a foreign language.
 
-In the project directory, you can run:
+### My solution:
+I decided to build a similar app which will bear a close resemblance to the app used in a test (which I have seen myself since I did the official test). I wanted my app to simulate the real test app but give the user some extra features.
+Number 0 is that the app should offer a dozen of exam versions.
+First, they may choose to do a random test or select a task to their liking.
+Second, they should be able to keep their text after they are done so they they can show it to their teacher or run through a spell checker / grammar checker and take pride in the result or cry for a bit.
+Third, the app should have some dummy-proof features such as the work should not disappear if a user accidentally closes their browser or refreshes the page.
+Fourth, there has to be a timer and a word counter.
 
-### `npm start`
+### Tech stack:
+- html 
+- css 
+- js 
+- react 
+- github
+- githubPages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Tech side:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I developed a SPA which runs on react framework with functional components and hooks. 
 
-### `npm test`
+- There is a 'database' object which holds a set of tasks for the test.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The state hooks helps toggle between 2 writing tasks a user has to complete as clicks on navbar buttons prompt taskState to change based on the current task number.
 
-### `npm run build`
+-  There is a word counter which through state hook is able to follow change on textarea element and uses string methods with a regExp to keep track of the number of words and displays them
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- There is a timer/stopwatch which displays how much time is left. It is build with useState and useEffect hooks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-  I made use of local storage to keep track of user's input. If a user accidentally closes their browser/a tab/whatever happens, their work is still there and they may keep working on the test.
