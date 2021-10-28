@@ -15,7 +15,12 @@ Third, the app should have some dummy-proof features such as the work should not
 Fourth, there has to be a timer and a word counter.
 
 ### Tech stack:
-Html css js react github githubPages
+- html 
+- css 
+- js 
+- react 
+- github
+- githubPages
 
 ### Tech side:
 
