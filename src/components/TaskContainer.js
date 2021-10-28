@@ -7,7 +7,8 @@ import { Context } from '../App';
 
 function TaskContainer() {
   const [taskNumber, setTaskNumber] = useState(1);
-  const {userInput1, setUserInput1, userInput2, setUserInput2} = useContext(Context)
+  const { userInput1, setUserInput1, userInput2, setUserInput2 } =
+    useContext(Context);
   // const [userInput1, setUserInput1] = useState('');
   // const [userInput2, setUserInput2] = useState('');
 
@@ -20,7 +21,7 @@ function TaskContainer() {
         {taskNumber === 1 && (
           <TaskFile
             number="1"
-            task="The table below shows how the UK unemployed spent their time last year. 
+            task="The table below shows how the UK unemployed spent their time last year. &#13;
         Summarise the information by selecting and reporting the main features,
         and make comparisons where relevant."
           />
@@ -37,9 +38,9 @@ function TaskContainer() {
         {taskNumber === 2 && (
           <TaskFile
             number="2"
-            task="Write about the following topic: 
+            task="Write about the following topic: &#13;
 Some people argue that all experimentation on animals is bad and should be outlawed.
-However, others believe that important scientific discoveries can be made from animal experiments.
+However, others believe that important scientific discoveries can be made from animal experiments.&#13;
 Can experimentation on animals be justified? Are there any alternatives?
 Give reasons for your answer and include any relevant examples from your own knowledge and experience."
           />

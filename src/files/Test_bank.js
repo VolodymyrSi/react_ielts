@@ -1,30 +1,31 @@
-const taskBank1 = [
+export const taskBank1 = [
   {
     book: 10,
     number: 1,
     task: 'The first chart below shows how energy is used in an average Australian household. The second chart shows the greenhouse gas emissions which result from this energy use.',
-    img: ''
+    img: '../files/10/10-1.jpg'
   },
   {
     book: 10,
     number: 2,
     task: 'The tables below give information about sales of Fairtrade*-labelled coffee and bananas in 1999 and 2004 in five European countries.',
-    img: ''
+    img: '../files/10/10-2.jpg'
   },
   {
     book: 10,
     number: 3,
     task: 'The charts below show what UK graduate and postgraduate students who did not go into full-time work did after leaving college in 2008.',
-    img: ''
+    img: '../files/10/10-3.jpg'
   },
   {
     book: 10,
     number: 4,
     task: 'The diagrams below show the life cycle of a species of large fish called the salmon. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.',
-    img: ''
+    img: '../files/10/10-4.jpg'
   }
 ];
-const taskBank2 = [
+
+export const taskBank2 = [
   {
     book: 10,
     number: 1,
