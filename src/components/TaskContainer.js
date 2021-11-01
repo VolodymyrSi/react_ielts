@@ -1,16 +1,22 @@
 import { useState, useContext } from 'react';
-import TaskHeader from './Task_header';
-import TaskFile from './Task_file';
-import TaskForm from './Task_form';
+import TaskHeader from './TaskHeader';
+import TaskFile from './TaskFile';
+import TaskForm from './TaskForm';
 import Nav from './Nav';
 import { Context } from '../App';
+import { task1AcademicBank } from '../files/Test_bank_academic.js';
+import { task2AcademicBank } from '../files/Test_bank_academic.js';
 
 function TaskContainer() {
   const [taskNumber, setTaskNumber] = useState(1);
-  const { userInput1, setUserInput1, userInput2, setUserInput2 } =
-    useContext(Context);
-  // const [userInput1, setUserInput1] = useState('');
-  // const [userInput2, setUserInput2] = useState('');
+  const {
+    userInput1,
+    setUserInput1,
+    userInput2,
+    setUserInput2,
+    ExamModule,
+    ExamModuleTaskNumber
+  } = useContext(Context);
 
   return (
     <div>
@@ -21,9 +27,10 @@ function TaskContainer() {
         {taskNumber === 1 && (
           <TaskFile
             number="1"
-            task="The table below shows how the UK unemployed spent their time last year. &#13;
-        Summarise the information by selecting and reporting the main features,
-        and make comparisons where relevant."
+            //     task="The table below shows how the UK unemployed spent their time last year. &#13;
+            // Summarise the information by selecting and reporting the main features,
+            // and make comparisons where relevant."
+            task={task1AcademicBank[ExamModuleTaskNumber - 1]['task']}
           />
         )}
         {taskNumber === 1 && (
@@ -38,11 +45,7 @@ function TaskContainer() {
         {taskNumber === 2 && (
           <TaskFile
             number="2"
-            task="Write about the following topic: &#13;
-Some people argue that all experimentation on animals is bad and should be outlawed.
-However, others believe that important scientific discoveries can be made from animal experiments.&#13;
-Can experimentation on animals be justified? Are there any alternatives?
-Give reasons for your answer and include any relevant examples from your own knowledge and experience."
+            task={task2AcademicBank[ExamModuleTaskNumber - 1]['task']}
           />
         )}
         {taskNumber === 2 && (

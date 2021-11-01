@@ -1,4 +1,4 @@
-export const taskBank1 = [
+export const task1AcademicBank = [
   {
     book: 10,
     number: 1,
@@ -25,7 +25,7 @@ export const taskBank1 = [
   }
 ];
 
-export const taskBank2 = [
+export const task2AcademicBank = [
   {
     book: 10,
     number: 1,

@@ -1,6 +1,7 @@
 import userIcon from '../files/user-icon.svg';
 import Timer from './Timer.js';
-import FinishButton from './Finish_button.js';
+import FinishButton from './FinishButton.js';
+import SelectTaskButton from './SelectTaskButton';
 
 function Header() {
   return (
@@ -11,6 +12,7 @@ function Header() {
       </div>
       <Timer />
       <div>
+        <SelectTaskButton />
         <FinishButton />
         <button className="headerButton">Help</button>
         <button className="headerButton">Hide</button>
