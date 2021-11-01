@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import TaskContainer from './components/TaskContainer';
 import React, { useState } from 'react';
+import PDFView from './components/PDF_view';
 
 export const Context = React.createContext();
 
@@ -14,6 +15,7 @@ function App() {
       <div className="body">
         <Header />
         <TaskContainer />
+        <PDFView className="PdfContainer" />
       </div>
     </Context.Provider>
   );

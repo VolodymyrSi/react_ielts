@@ -22,6 +22,10 @@ function Timer() {
     Swal.fire('5 minutes left');
   }
 
+  function timeUp() {
+    Swal.fire('Time is up, please save your work');
+  }
+
   return (
     <div className="timerContainer">
       <img src={clockIcon} alt="clockpic" className="clockIcon" />
@@ -30,6 +34,7 @@ function Timer() {
       </p>
       {timer === 60 * 50 && tenMintesLeft()}
       {timer === 60 * 55 && fiveMinutesLeft()}
+      {timer === 60 * 60 && timeUp()}
     </div>
   );
 }
