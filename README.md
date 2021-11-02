@@ -1,4 +1,4 @@
-# _this project is under development_
+# _this is alpha version_
 
 >### Background:
 >Millions of people take IELTS English test every year. One section on the test is writing, where the examinees are expected to type up 2 texts on a >computer. There is a special app which provides the tasks and to candidates and enables them to input their answers.
