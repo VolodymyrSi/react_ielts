@@ -8,7 +8,7 @@ export default function PDFView() {
   const styles = StyleSheet.create({
     page: {
       flexDirection: 'row',
-      backgroundColor: '#E4E4E4'
+      backgroundColor: '#fff'
     },
     section: {
       margin: 10,
@@ -22,11 +22,13 @@ export default function PDFView() {
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
+          <Text>Task 1</Text>
           <Text>{userInput1}</Text>
         </View>
       </Page>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
+          <Text>Task 2</Text>
           <Text>{userInput2}</Text>
         </View>
       </Page>

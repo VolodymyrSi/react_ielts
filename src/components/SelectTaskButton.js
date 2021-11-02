@@ -1,9 +1,9 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { Context } from '../App';
 
 function SelectTaskButton() {
-  const { ExamModule, setExamModule, ExamModuleTaskNumber, setExamModuleTaskNumber } =
+  const { setExamModule, setExamModuleTaskNumber, setHasTask, setIsWriting } =
     useContext(Context);
 
   async function chooseExamModuleTaskNumber() {
@@ -30,8 +30,9 @@ function SelectTaskButton() {
     });
 
     if (ExamModuleTaskNumber) {
-      Swal.fire({ html: `You selected ${ExamModuleTaskNumber}` });
       setExamModuleTaskNumber(ExamModuleTaskNumber);
+      setHasTask(true);
+      setIsWriting(true);
     }
   }
 
@@ -57,15 +58,16 @@ function SelectTaskButton() {
     });
 
     if (module) {
-      Swal.fire({ html: `You selected ${module}` });
       setExamModule(module);
-      setTimeout(() => chooseExamModuleTaskNumber(), 2000);
+      setTimeout(() => chooseExamModuleTaskNumber(), 5);
     }
   }
   return (
-    <button className="headerButton" onClick={() => chooseModule()}>
-      Select Task
-    </button>
+    <div className="selectTaskContainer">
+      <button className="selectTaskButton" onClick={() => chooseModule()}>
+        Take a test
+      </button>
+    </div>
   );
 }
 

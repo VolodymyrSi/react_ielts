@@ -3,6 +3,25 @@ body {
   background-color: #e0e6f0;
 }
 
+/* selectTask screen */
+
+.selectTaskContainer {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectTaskButton {
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 48px;
+  color: #000;
+  background-color: #faf6f6;
+  border-color: #faf6f6;
+  border-radius: 8px;
+}
+
 /* header */
 
 .header {
@@ -43,7 +62,7 @@ body {
   margin: 10px 5px;
 }
 
-.headerButton:first-child {
+.finishTest {
   width: 10em;
 }
 
@@ -94,7 +113,7 @@ body {
 }
 
 .taskFile img {
-  width: 35em;
+  max-width: 35em;
 }
 
 .taskFileAndForm {
@@ -106,8 +125,6 @@ body {
   margin-right: 2em;
   box-shadow: 0 0.0714em 0.214em rgb(0 0 0 / 25%);
   border-radius: 8px;
-
-  /* width:80% */
 }
 
 .taskForm {

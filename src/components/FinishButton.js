@@ -1,5 +1,17 @@
+import {  useContext } from 'react';
+import { Context } from '../App';
+
 function FinishButton() {
-  return <button className="headerButton finishTest">Finish test</button>;
+  const { setIsFinished, setIsWriting } = useContext(Context);
+  function finishTest() {
+    setIsWriting(false);
+    setIsFinished(true);
+  }
+  return (
+    <button className="headerButton finishTest" onClick={() => finishTest()}>
+      Finish test
+    </button>
+  );
 }
 
 export default FinishButton;

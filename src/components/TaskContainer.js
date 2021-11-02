@@ -4,8 +4,12 @@ import TaskFile from './TaskFile';
 import TaskForm from './TaskForm';
 import Nav from './Nav';
 import { Context } from '../App';
+
 import { task1AcademicBank } from '../files/Test_bank_academic.js';
 import { task2AcademicBank } from '../files/Test_bank_academic.js';
+
+import { task1GeneralBank } from '../files/Test_bank_general.js';
+import { task2GeneralBank } from '../files/Test_bank_general.js';
 
 function TaskContainer() {
   const [taskNumber, setTaskNumber] = useState(1);
@@ -18,19 +22,28 @@ function TaskContainer() {
     ExamModuleTaskNumber
   } = useContext(Context);
 
+  function moduleSelector(ExamModule) {
+    let taskBank = null;
+    ExamModule === 'Academic'
+      ? (taskBank = [task1AcademicBank, task2AcademicBank])
+      : (taskBank = [task1GeneralBank, task2GeneralBank]);
+    return taskBank;
+  }
+
   return (
     <div>
       <div className="taskContainer">
-        <TaskHeader />
+        <TaskHeader taskNumber={taskNumber} />
       </div>
       <div className="taskFileAndForm">
         {taskNumber === 1 && (
           <TaskFile
             number="1"
-            //     task="The table below shows how the UK unemployed spent their time last year. &#13;
-            // Summarise the information by selecting and reporting the main features,
-            // and make comparisons where relevant."
-            task={task1AcademicBank[ExamModuleTaskNumber - 1]['task']}
+            task={
+              moduleSelector(ExamModule)[0][ExamModuleTaskNumber - 1]['task']
+            }
+            taskNumber={ExamModuleTaskNumber}
+            module={ExamModule}
           />
         )}
         {taskNumber === 1 && (
@@ -45,7 +58,10 @@ function TaskContainer() {
         {taskNumber === 2 && (
           <TaskFile
             number="2"
-            task={task2AcademicBank[ExamModuleTaskNumber - 1]['task']}
+            task={
+              moduleSelector(ExamModule)[1][ExamModuleTaskNumber - 1]['task']
+            }
+            module={ExamModule}
           />
         )}
         {taskNumber === 2 && (
