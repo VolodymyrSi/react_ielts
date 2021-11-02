@@ -1,4 +1,5 @@
 #### _this is alpha version_
+[Click me to use the app](https://volodymyrsi.github.io/react_ielts/)
 
 >### Background:
 >Millions of people take IELTS English test every year. One section on the test is writing, where the examinees are expected to type up 2 texts on a computer. There is a special app which provides the tasks to candidates and enables them to input their answers.
