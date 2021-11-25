@@ -1,7 +1,6 @@
 import clockIcon from '../../files/clock-icon.svg';
 import { useEffect, useState } from 'react';
 import { tenMintesLeft, fiveMinutesLeft, timeUp } from '../utils/alerts';
-// import Swal from 'sweetalert2';
 
 function Timer() {
   const [timer, setTimer] = useState(0);
@@ -14,18 +13,6 @@ function Timer() {
   let maxTime = 60 * 60;
   let seconds = 60 - (timer % 60);
   let minutes = Math.floor(maxTime / 60 - timer / 60);
-
-  // function tenMintesLeft() {
-  //   Swal.fire('10 minutes left');
-  // }
-
-  // function fiveMinutesLeft() {
-  //   Swal.fire('5 minutes left');
-  // }
-
-  // function timeUp() {
-  //   Swal.fire('Time is up, please save your work');
-  // }
 
   return (
     <div className="timerContainer">

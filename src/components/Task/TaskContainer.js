@@ -4,12 +4,21 @@ import TaskFile from './TaskFile';
 import TaskForm from './TaskForm';
 import Nav from '../Nav/Nav';
 import { Context } from '../../App';
+import s from './TaskContainer.module.css'
 
 import { task1AcademicBank } from '../../files/Test_bank_academic.js';
 import { task2AcademicBank } from '../../files/Test_bank_academic.js';
 
 import { task1GeneralBank } from '../../files/Test_bank_general.js';
 import { task2GeneralBank } from '../../files/Test_bank_general.js';
+
+function moduleSelector(ExamModule) {
+  let taskBank = null;
+  ExamModule === 'Academic'
+    ? (taskBank = [task1AcademicBank, task2AcademicBank])
+    : (taskBank = [task1GeneralBank, task2GeneralBank]);
+  return taskBank;
+}
 
 function TaskContainer() {
   const [taskNumber, setTaskNumber] = useState(1);
@@ -22,20 +31,12 @@ function TaskContainer() {
     ExamModuleTaskNumber
   } = useContext(Context);
 
-  function moduleSelector(ExamModule) {
-    let taskBank = null;
-    ExamModule === 'Academic'
-      ? (taskBank = [task1AcademicBank, task2AcademicBank])
-      : (taskBank = [task1GeneralBank, task2GeneralBank]);
-    return taskBank;
-  }
-
   return (
     <div>
-      <div className="taskContainer">
+      <div className={s.taskWrapper}>
         <TaskHeader taskNumber={taskNumber} />
       </div>
-      <div className="taskFileAndForm">
+      <div className={s.container}>
         {taskNumber === 1 && (
           <TaskFile
             number="1"
@@ -54,7 +55,7 @@ function TaskContainer() {
           />
         )}
       </div>
-      <div className="taskFileAndForm">
+      <div className={s.container}>
         {taskNumber === 2 && (
           <TaskFile
             number="2"
@@ -72,7 +73,7 @@ function TaskContainer() {
           />
         )}
       </div>
-      <div className="navFlexContainer">
+      <div className={s.navWrapper}>
         <Nav onClick={setTaskNumber} />
       </div>
     </div>

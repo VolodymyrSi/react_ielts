@@ -25,18 +25,6 @@ body {
   box-shadow: 0 0.0714em 0.214em rgb(0 0 0 / 25%);
 }
 
-.taskContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.taskContainer p,
-.taskContainer h1 {
-  margin-left: 2rem;
-}
-
-/* task box */
-
 .taskFile {
   display: flex;
   flex-direction: column;
@@ -53,17 +41,6 @@ body {
   max-width: 35em;
 }
 
-.taskFileAndForm {
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
-  background-image: linear-gradient(to top, #fff, #dde3ee);
-  margin-left: 2em;
-  margin-right: 2em;
-  box-shadow: 0 0.0714em 0.214em rgb(0 0 0 / 25%);
-  border-radius: 8px;
-}
-
 .taskForm {
   margin: 0 2em;
   min-width: 45%;
@@ -77,11 +54,6 @@ body {
 }
 
 /* nav */
-
-.navFlexContainer {
-  display: flex;
-  justify-content: center;
-}
 
 
 button:hover {
