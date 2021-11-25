@@ -1,6 +1,6 @@
-import userIcon from '../files/user-icon.svg';
-import Timer from './Timer/Timer.js';
-import FinishButton from './Buttons/FinishButton.js';
+import userIcon from '../../files/user-icon.svg';
+import Timer from '../Timer/Timer.js';
+import FinishButton from '../Buttons/FinishButton.js';
 
 function Header() {
   return (

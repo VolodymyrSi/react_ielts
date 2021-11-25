@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import SelectTaskButton from './components/Buttons/SelectTaskButton';
 
-import Header from './components/Header';
-import TaskContainer from './components/TaskContainer';
+import Header from './components/Header/Header';
+import TaskContainer from './components/Task/TaskContainer';
 import PDFView from './components/PDF/PdfView';
 
 export const Context = React.createContext();

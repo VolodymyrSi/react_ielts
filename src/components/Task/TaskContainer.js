@@ -2,14 +2,14 @@ import { useState, useContext } from 'react';
 import TaskHeader from './TaskHeader';
 import TaskFile from './TaskFile';
 import TaskForm from './TaskForm';
-import Nav from './Nav/Nav';
-import { Context } from '../App';
+import Nav from '../Nav/Nav';
+import { Context } from '../../App';
 
-import { task1AcademicBank } from '../files/Test_bank_academic.js';
-import { task2AcademicBank } from '../files/Test_bank_academic.js';
+import { task1AcademicBank } from '../../files/Test_bank_academic.js';
+import { task2AcademicBank } from '../../files/Test_bank_academic.js';
 
-import { task1GeneralBank } from '../files/Test_bank_general.js';
-import { task2GeneralBank } from '../files/Test_bank_general.js';
+import { task1GeneralBank } from '../../files/Test_bank_general.js';
+import { task2GeneralBank } from '../../files/Test_bank_general.js';
 
 function TaskContainer() {
   const [taskNumber, setTaskNumber] = useState(1);

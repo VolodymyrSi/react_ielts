@@ -1,7 +1,7 @@
-import task1picture from '../files/10/10-1.jpg';
-import task2picture from '../files/10/10-2.jpeg';
-import task3picture from '../files/10/10-3.jpg';
-import task4picture from '../files/10/10-4.jpg';
+import task1picture from '../../files/10/10-1.jpg';
+import task2picture from '../../files/10/10-2.jpeg';
+import task3picture from '../../files/10/10-3.jpg';
+import task4picture from '../../files/10/10-4.jpg';
 
 function TaskFile(props) {
   function imageSelector(prop) {
