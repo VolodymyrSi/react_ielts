@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import SelectTaskButton from './components/SelectTaskButton';
+import SelectTaskButton from './components/Buttons/SelectTaskButton';
 
 import Header from './components/Header';
 import TaskContainer from './components/TaskContainer';
-import PDFView from './components/PdfView';
+import PDFView from './components/PDF/PdfView';
 
 export const Context = React.createContext();
 

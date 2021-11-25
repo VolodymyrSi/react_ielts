@@ -1,5 +1,5 @@
 import React from 'react';
-import { Context } from '../App';
+import { Context } from '../../App';
 import { useContext } from 'react';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import { PDFViewer } from '@react-pdf/renderer';
