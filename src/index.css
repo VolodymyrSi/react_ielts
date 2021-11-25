@@ -3,53 +3,6 @@ body {
   background-color: #e0e6f0;
 }
 
-/* selectTask screen */
-
-.selectTaskContainer {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.TaskSelector {
-  padding: 1rem 2rem;
-  font-weight: 700;
-  font-size: 48px;
-  color: #000;
-  background-color: #faf6f6;
-  border-color: #faf6f6;
-  border-radius: 8px;
-}
-
-/* header */
-
-.header {
-  background-image: linear-gradient(to top, #152531, #434c51, #152531);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.headerUserInfoContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #d1f0ce;
-  margin-left: 2em;
-}
-
-.headerUserInfoContainer p {
-  margin-left: 1em;
-}
-
-.userIcon {
-  height: 30px;
-}
-
-.HeaderButtonContainer {
-  margin-right: 20px;
-}
 
 .headerButton {
   color: #000;
@@ -60,7 +13,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   margin: 10px 5px;
-}
+} 
 
 .finishTest {
   width: 10em;

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
-import { Context } from '../../App';
+import { Context } from '../../../App';
+import s from './TaskSelector.module.css'
 
 function TaskSelector() {
   const { setExamModule, setExamModuleTaskNumber, setHasTask, setIsWriting } =
@@ -63,8 +64,8 @@ function TaskSelector() {
     }
   }
   return (
-    <div className="selectTaskContainer">
-      <button className="TaskSelector" onClick={() => chooseModule()}>
+    <div className={s.container}>
+      <button className={s.item} onClick={() => chooseModule()}>
         Take a test
       </button>
     </div>

@@ -1,5 +1,5 @@
 import {  useContext } from 'react';
-import { Context } from '../../App';
+import { Context } from '../../../App';
 
 function FinishButton() {
   const { setIsFinished, setIsWriting } = useContext(Context);

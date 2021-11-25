@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import TaskSelector from './components/Buttons/TaskSelector';
+import TaskSelector from './components/Header/Buttons/TaskSelector';
 
 import Header from './components/Header/Header';
 import TaskContainer from './components/Task/TaskContainer';
