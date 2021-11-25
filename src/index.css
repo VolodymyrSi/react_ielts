@@ -3,22 +3,6 @@ body {
   background-color: #e0e6f0;
 }
 
-
-.headerButton {
-  color: #000;
-  background-color: #faf6f6;
-  border-color: #faf6f6;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding: 10px;
-  border-radius: 8px;
-  margin: 10px 5px;
-} 
-
-.finishTest {
-  width: 10em;
-}
-
 /* clock */
 
 .timerContainer {
@@ -99,42 +83,10 @@ body {
   justify-content: center;
 }
 
-.navigationContainer {
-  width: 60%;
-  display: flex;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 50%);
-  border-radius: 8px;
-  padding: 0px 10px;
-  margin: 10px 0;
-  font-weight: 700;
-}
-
-.navigationButtonContainer {
-  display: flex;
-  align-items: center;
-  flex-flow: row;
-}
-
-.navigationButton {
-  height: 35px;
-  width: 35px;
-  border: none;
-  padding: 0;
-  background-color: #565656;
-  border-radius: 0.25rem;
-  margin-left: 0.5em;
-  margin-right: 1em;
-  font-weight: bolder;
-  color: white;
-}
 
 button:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
-
-.finishTest {
-  margin-right: 5em;
 }
 
 iframe {
