@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { Context } from '../../App';
 
-function SelectTaskButton() {
+function TaskSelector() {
   const { setExamModule, setExamModuleTaskNumber, setHasTask, setIsWriting } =
     useContext(Context);
 
@@ -64,11 +64,11 @@ function SelectTaskButton() {
   }
   return (
     <div className="selectTaskContainer">
-      <button className="selectTaskButton" onClick={() => chooseModule()}>
+      <button className="TaskSelector" onClick={() => chooseModule()}>
         Take a test
       </button>
     </div>
   );
 }
 
-export default SelectTaskButton;
+export default TaskSelector;

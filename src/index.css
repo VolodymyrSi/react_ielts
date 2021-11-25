@@ -12,7 +12,7 @@ body {
   align-items: center;
 }
 
-.selectTaskButton {
+.TaskSelector {
   padding: 1rem 2rem;
   font-weight: 700;
   font-size: 48px;

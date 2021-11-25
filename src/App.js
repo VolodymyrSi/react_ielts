@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import SelectTaskButton from './components/Buttons/SelectTaskButton';
+import TaskSelector from './components/Buttons/TaskSelector';
 
 import Header from './components/Header/Header';
 import TaskContainer from './components/Task/TaskContainer';
@@ -34,7 +34,7 @@ function App() {
         setIsWriting
       }}
     >
-      {!hasTask && <SelectTaskButton />}
+      {!hasTask && <TaskSelector />}
       {isWriting && (
         <div className="body">
           <Header />
