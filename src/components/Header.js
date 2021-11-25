@@ -1,5 +1,5 @@
 import userIcon from '../files/user-icon.svg';
-import Timer from './Timer.js';
+import Timer from './Timer/Timer.js';
 import FinishButton from './FinishButton.js';
 
 function Header() {

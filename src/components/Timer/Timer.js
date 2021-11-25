@@ -1,4 +1,4 @@
-import clockIcon from '../files/clock-icon.svg';
+import clockIcon from '../../files/clock-icon.svg';
 import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 
