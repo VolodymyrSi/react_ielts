@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import TaskSelector from './components/Header/Buttons/TaskSelector';
 
@@ -20,7 +19,6 @@ function App() {
   const [userInput1, setUserInput1] = useState('');
   const [userInput2, setUserInput2] = useState('');
   return (
-    <Router>
       <Context.Provider
         value={{
           userInput1,
@@ -45,7 +43,6 @@ function App() {
         )}
         {isFinished && <PDFView className="PdfContainer" />}
       </Context.Provider>
-    </Router>
   );
 }
 
