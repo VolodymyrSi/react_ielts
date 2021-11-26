@@ -4,10 +4,9 @@ import TaskForm from '../Task/TaskForm';
 import { Context } from '../../App';
 import { useContext } from 'react';
 
-import s from '../Task/TaskContainer.module.css';
+import style from '../Task/TaskContainer.module.css';
 
 import { moduleSelector } from '../utils/helper';
-
 
 
 function Task1() {
@@ -18,7 +17,7 @@ function Task1() {
     ExamModuleTaskNumber
   } = useContext(Context);
   return (
-    <div className={s.container}>
+    <div className={style.container}>
       <TaskFile
         number="1"
         task={moduleSelector(ExamModule)[0][ExamModuleTaskNumber - 1]['task']}

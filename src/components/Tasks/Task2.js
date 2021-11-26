@@ -2,14 +2,14 @@ import React from 'react';
 import TaskFile from '../Task/TaskFile';
 import TaskForm from '../Task/TaskForm';
 import { Context } from '../../App';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { task1AcademicBank } from '../../files/Test_bank_academic.js';
 import { task2AcademicBank } from '../../files/Test_bank_academic.js';
 
 import { task1GeneralBank } from '../../files/Test_bank_general.js';
 import { task2GeneralBank } from '../../files/Test_bank_general.js';
 
-import s from '../Task/TaskContainer.module.css';
+import style from '../Task/TaskContainer.module.css';
 
 
 
@@ -31,7 +31,7 @@ function Task2() {
     ExamModuleTaskNumber
   } = useContext(Context);
   return (
-    <div className={s.container}>
+    <div className={style.container}>
       <TaskFile
         number="2"
         task={moduleSelector(ExamModule)[1][ExamModuleTaskNumber - 1]['task']}
