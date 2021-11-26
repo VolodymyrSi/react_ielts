@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import TaskSelector from './components/Header/Buttons/TaskSelector';
 
@@ -19,30 +20,32 @@ function App() {
   const [userInput1, setUserInput1] = useState('');
   const [userInput2, setUserInput2] = useState('');
   return (
-    <Context.Provider
-      value={{
-        userInput1,
-        setUserInput1,
-        userInput2,
-        setUserInput2,
-        ExamModule,
-        setExamModule,
-        ExamModuleTaskNumber,
-        setExamModuleTaskNumber,
-        setHasTask,
-        setIsFinished,
-        setIsWriting
-      }}
-    >
-      {!hasTask && <TaskSelector />}
-      {isWriting && (
-        <div className="body">
-          <Header />
-          <TaskContainer />
-        </div>
-      )}
-      {isFinished && <PDFView className="PdfContainer" />}
-    </Context.Provider>
+    <Router>
+      <Context.Provider
+        value={{
+          userInput1,
+          setUserInput1,
+          userInput2,
+          setUserInput2,
+          ExamModule,
+          setExamModule,
+          ExamModuleTaskNumber,
+          setExamModuleTaskNumber,
+          setHasTask,
+          setIsFinished,
+          setIsWriting
+        }}
+      >
+        {!hasTask && <TaskSelector />}
+        {isWriting && (
+          <div className="body">
+            <Header />
+            <TaskContainer />
+          </div>
+        )}
+        {isFinished && <PDFView className="PdfContainer" />}
+      </Context.Provider>
+    </Router>
   );
 }
 
