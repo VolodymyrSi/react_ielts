@@ -3,6 +3,18 @@ body {
   background-color: #e0e6f0;
 }
 
+
+.taskWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.taskWrapper p,
+.taskWrapper h1 {
+  margin-left: 2rem;
+}
+
+
 /* clock */
 
 .timerContainer {
