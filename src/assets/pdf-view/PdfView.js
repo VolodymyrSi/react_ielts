@@ -1,20 +1,20 @@
-import React from 'react';
-import { Context } from '../../App';
-import { useContext } from 'react';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import { PDFViewer } from '@react-pdf/renderer';
+import React from "react";
+import { Context } from "../../App";
+import { useContext } from "react";
+import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { PDFViewer } from "@react-pdf/renderer";
 
 export default function PDFView() {
   const styles = StyleSheet.create({
     page: {
-      flexDirection: 'row',
-      backgroundColor: '#fff'
+      flexDirection: "row",
+      backgroundColor: "#fff",
     },
     section: {
       margin: 10,
       padding: 10,
-      flexGrow: 1
-    }
+      flexGrow: 1,
+    },
   });
 
   // Create Document Component

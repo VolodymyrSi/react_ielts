@@ -1,22 +1,23 @@
-import userIcon from '../../files/user-icon.svg';
-import Timer from '../Timer/Timer.js';
-import FinishButton from './Buttons/FinishButton.js';
-import style from './Header.module.css'
+import userIcon from "../../files/user-icon.svg";
+import Timer from "../../assets/timer/Timer.js";
+import FinishButton from "./Buttons/FinishButton.js";
+import { Button } from "../Buttons/styled";
+import { StyledHeader, UserInfoContainer } from "./styled";
 
 function Header() {
   return (
-    <div className={style.header}>
-      <div className={style.userInfoContainer}>
-        <img src={userIcon} alt="userpic" className={style.userIcon} />
+    <StyledHeader>
+      <UserInfoContainer>
+        <img src={userIcon} alt="userpic" className="userIcon" />
         <p>XXXX-XXXX 123456</p>
-      </div>
+      </UserInfoContainer>
       <Timer />
       <div>
         <FinishButton />
-        <button className={style.button}>Help</button>
-        <button className={style.button}>Hide</button>
+        <Button>Help</Button>
+        <Button>Hide</Button>
       </div>
-    </div>
+    </StyledHeader>
   );
 }
 

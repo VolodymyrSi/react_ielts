@@ -1,32 +1,30 @@
-import React from 'react';
-import TaskFile from '../Task/TaskFile';
-import TaskForm from '../Task/TaskForm';
-import { Context } from '../../App';
-import { useContext } from 'react';
+import TaskFile from "../components/Task/TaskFile";
+import TaskForm from "../components/Task/TaskForm";
+import { Context } from "../App";
+import { useContext } from "react";
+import { TaskWrapper, TaskHeader, TaskContainer } from "./styled";
 
-import style from '../Task/TaskContainer.module.css';
-
-import { moduleSelector } from '../utils/helper';
+import { moduleSelector } from "../components/utils/helper";
 
 function Task1() {
   const { userInput1, setUserInput1, ExamModule, ExamModuleTaskNumber } =
     useContext(Context);
   return (
     <>
-      <div className="taskWrapper">
-        <div className="taskHeader">
+      <TaskWrapper>
+        <TaskHeader>
           <h1>Part 1</h1>
           <p>
             You should spend about 20 minutes on this task. Write at least 150
             words.
           </p>
-        </div>
-      </div>
+        </TaskHeader>
+      </TaskWrapper>
 
-      <div className={style.container}>
+      <TaskContainer>
         <TaskFile
           number="1"
-          task={moduleSelector(ExamModule)[0][ExamModuleTaskNumber - 1]['task']}
+          task={moduleSelector(ExamModule)[0][ExamModuleTaskNumber - 1]["task"]}
           taskNumber={ExamModuleTaskNumber}
           module={ExamModule}
         />
@@ -35,7 +33,7 @@ function Task1() {
           setInput={setUserInput1}
           value={userInput1}
         />
-      </div>
+      </TaskContainer>
     </>
   );
 }
