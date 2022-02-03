@@ -1,4 +1,4 @@
-import clockIcon from "../files/clock-icon.svg";
+import clockIcon from "../../assets/icons/clock-icon.svg";
 import { useEffect, useState } from "react";
 import {
   tenMintesLeft,

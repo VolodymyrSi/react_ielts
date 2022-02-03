@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
-import { Context } from "../App";
+import { Context } from "../../App";
 import { Container } from "./styled";
 
 function TaskSelector() {

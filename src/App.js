@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-import TaskSelector from "./features/TaskSelector";
+import TaskSelector from "./features/task-selector/TaskSelector";
 
 import Header from "./components/Header/Header";
 import TaskContainer from "./pages/TaskContainer";
 import PDFView from "./assets/pdf-view/PdfView";
+import { GlobalStyleNormalizeCSS } from "./assets/styles/global-style";
 
 export const Context = React.createContext();
 
@@ -34,6 +35,7 @@ function App() {
         setIsWriting,
       }}
     >
+      <GlobalStyleNormalizeCSS />
       {!hasTask && <TaskSelector />}
       {isWriting && (
         <div className="body">

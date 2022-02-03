@@ -1,6 +1,6 @@
-import userIcon from "../../files/user-icon.svg";
-import Timer from "../../assets/timer/Timer.js";
-import FinishButton from "./Buttons/FinishButton.js";
+import userIcon from "../../assets/icons/user-icon.svg";
+import Timer from "../../features/timer/Timer.js";
+import FinishButton from "../Buttons/FinishButton";
 import { Button } from "../Buttons/styled";
 import { StyledHeader, UserInfoContainer } from "./styled";
 
