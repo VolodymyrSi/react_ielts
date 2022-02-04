@@ -17,8 +17,8 @@ export const TaskHeader = styled.div`
   box-shadow: 0 0.0714em 0.214em rgb(0 0 0 / 25%);
   border: ${(props) =>
     props.theme.style === "Light"
-      ? "1px solid transparent"
-      : "1px solid #faf6f6"};
+      ? props.theme.borderInvisible
+      : props.theme.borderVisible};
 `;
 
 export const TaskContainer = styled.div`
@@ -30,11 +30,11 @@ export const TaskContainer = styled.div`
       ? "linear-gradient(to top, #fff, #dde3ee)"
       : "none"};
   background-color: ${(props) =>
-    props.theme.style === "Light" ? "none" : "hsl(210, 30%, 8%)"};
+    props.theme.style === "Light" ? "none" : props.theme.primary};
   border: ${(props) =>
     props.theme.style === "Light"
-      ? "1px solid transparent"
-      : "1px solid #faf6f6"};
+      ? props.theme.borderInvisible
+      : props.theme.borderVisible};
   margin-left: 2em;
   margin-right: 2em;
   box-shadow: 0 0.07em 0.2em rgb(0 0 0 / 25%);

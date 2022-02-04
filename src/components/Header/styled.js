@@ -6,15 +6,15 @@ export const StyledHeader = styled.div`
       ? "linear-gradient(to top, #152531, #434c51, #152531)"
       : "none"};
   background-color: ${(props) =>
-    props.theme.style === "Light" ? "none" : "hsl(210, 30%, 8%)"};
+    props.theme.style === "Light" ? "none" : props.theme.primary};
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
   border: ${(props) =>
     props.theme.style === "Light"
-      ? "1px solid transparent"
-      : "1px solid #faf6f6"};
+      ? props.theme.borderInvisible
+      : props.theme.borderVisible};
 
   .userIcon {
     height: 30px;

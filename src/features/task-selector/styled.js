@@ -5,8 +5,7 @@ export const Container = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
-
-  .item {
+  button {
     padding: 1rem 2rem;
     font-weight: 700;
     font-size: 48px;

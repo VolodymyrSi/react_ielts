@@ -1,19 +1,18 @@
 import { useContext } from "react";
-import userIcon from "../../assets/icons/user-icon.svg";
+import { Context } from "../../App";
 import Timer from "../../features/timer/Timer.js";
 import FinishButton from "../Buttons/FinishButton";
 import { Button } from "../Buttons/styled";
+import { themeLight, themeDark } from "../../assets/styles/themes";
 import { StyledHeader, UserInfoContainer } from "./styled";
-import {themeLight, themeDark} from '../../assets/styles/themes'
-import { Context } from "../../App";
+
+import userIcon from "../../assets/icons/user-icon.svg";
 
 function Header() {
   const { theme, setTheme } = useContext(Context);
 
   const toggleTheme = () => {
-    console.log(theme);
     setTheme(theme.style === "Light" ? themeDark : themeLight);
-    console.log(theme);
   };
 
   return (

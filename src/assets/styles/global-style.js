@@ -13,21 +13,19 @@ iframe {
   height: 100vh;
 }
 
-
- html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-  }
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
   
   
-  body {
-    margin: 0;
-  }
+body {
+   margin: 0;
+}
   
-  
-  main {
-    display: block;
-  }
+main {
+  display: block;
+}
   
   h1 {
     font-size: 2em;
@@ -95,7 +93,7 @@ iframe {
   img {
     border-style: none;
   }
-  
+
   
   button,
   input,
@@ -126,9 +124,6 @@ iframe {
     -webkit-appearance: button;
   }
   
-  /**
-   * Remove the inner border and padding in Firefox.
-   */
   
   button::-moz-focus-inner,
   [type="button"]::-moz-focus-inner,
@@ -138,10 +133,7 @@ iframe {
     padding: 0;
   }
   
-  /**
-   * Restore the focus styles unset by the previous rule.
-   */
-  
+ 
   button:-moz-focusring,
   [type="button"]:-moz-focusring,
   [type="reset"]:-moz-focusring,
@@ -168,28 +160,16 @@ iframe {
     vertical-align: baseline;
   }
   
-  /**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
-  
+
   textarea {
     overflow: auto;
   }
-  
-  /**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
-  
+
   [type="checkbox"],
   [type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
   }
-  
-  /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
   
   [type="number"]::-webkit-inner-spin-button,
   [type="number"]::-webkit-outer-spin-button {
@@ -201,10 +181,6 @@ iframe {
     outline-offset: -2px; /* 2 */
   }
   
-  /**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
-  
   [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
   }
@@ -214,39 +190,16 @@ iframe {
     font: inherit; /* 2 */
   }
   
-  /* Interactive
-     ========================================================================== */
-  
-  /*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-  
+
   details {
     display: block;
   }
   
-  /*
-   * Add the correct display in all browsers.
-   */
   
   summary {
     display: list-item;
   }
   
-  /* Misc
-     ========================================================================== */
-  
-  /**
-   * Add the correct display in IE 10+.
-   */
-  
-  template {
-    display: none;
-  }
-  
-  /**
-   * Add the correct display in IE 10.
-   */
   
   [hidden] {
     display: none;

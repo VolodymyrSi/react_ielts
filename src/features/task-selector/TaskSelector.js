@@ -65,9 +65,7 @@ function TaskSelector() {
   }
   return (
     <Container>
-      <button className="item" onClick={() => chooseModule()}>
-        Take a test
-      </button>
+      <button onClick={() => chooseModule()}>Take a test</button>
     </Container>
   );
 }

@@ -11,7 +11,7 @@ export const StyledTaskFile = styled.div`
       ? "linear-gradient(to top, #fff, #dde3ee)"
       : "none"};
   background-color: ${(props) =>
-    props.theme.style === "Light" ? "none" : "hsl(210, 30%, 8%)"};
+    props.theme.style === "Light" ? "none" : props.theme.primary};
   margin: 0 2em;
   min-width: 40%;
   max-width: 40%;
