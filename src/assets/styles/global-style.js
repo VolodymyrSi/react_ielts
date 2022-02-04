@@ -2,6 +2,17 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyleNormalizeCSS = createGlobalStyle`
 
+body {
+  font-family: helvetica, sans-serif;
+  background-color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.text}
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+}
+
 
  html {
     line-height: 1.15; /* 1 */

@@ -6,7 +6,12 @@ export const StyledTaskFile = styled.div`
   align-items: center;
   align-content: center;
   border-radius: 13px;
-  background-image: linear-gradient(to top, #fff, #dde3ee);
+  background-image: ${(props) =>
+    props.theme.style === "Light"
+      ? "linear-gradient(to top, #fff, #dde3ee)"
+      : "none"};
+  background-color: ${(props) =>
+    props.theme.style === "Light" ? "none" : "hsl(210, 30%, 8%)"};
   margin: 0 2em;
   min-width: 40%;
   max-width: 40%;
@@ -25,4 +30,7 @@ export const TextArea = styled.textarea`
   min-width: 100%;
   min-height: 600px;
   margin: 1em 0;
+  outline: none;
+  background-color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.text}
 `;

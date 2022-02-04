@@ -18,7 +18,7 @@ function TaskContainer() {
           <Route path="/task2" element={<Task2 />} />
         </Routes>
         <NavWrapper>
-          <Nav onClick={setTaskNumber} />
+          <Nav onClick={() => setTaskNumber} />
         </NavWrapper>
       </BrowserRouter>
     </div>

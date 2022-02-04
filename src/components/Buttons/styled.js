@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  color: #000;
-  background-color: #faf6f6;
-  border-color: #faf6f6;
+  color: ${(props) => props.theme.text};
+  background-color: ${(props) => props.theme.primary};
+  border: ${(props) => (props.theme.style === "Light" ? "1px solid transparent" : "1px solid #faf6f6")};
   margin-top: 2px;
   margin-bottom: 2px;
   padding: 10px;
@@ -19,9 +19,10 @@ export const NavButton = styled(Button)`
   color: white;
   height: 35px;
   width: 35px;
-  border: none;
+  border: ${(props) => (props.theme.style === "Light" ? "1px solid transparent" : "1px solid #faf6f6")};
   padding: 0;
-  background-color: #565656;
+  background-color: ${(props) =>
+    props.theme.style === "Light" ? "#565656" : "hsl(210, 30%, 8%)"};
   border-radius: 0.25rem;
   margin-left: 0.5em;
   margin-right: 1em;
