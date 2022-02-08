@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
 
-import TaskSelector from './components/Header/Buttons/TaskSelector';
+import TaskSelector from "./features/task-selector/TaskSelector";
+import Header from "./components/Header/Header";
+import TaskContainer from "./pages/TaskContainer";
+import PDFView from "./assets/pdf-view/PdfView";
 
-import Header from './components/Header/Header';
-import TaskContainer from './components/Task/TaskContainer';
-import PDFView from './components/PDF/PdfView';
+import { GlobalStyleNormalizeCSS } from "./assets/styles/global-style";
+import {themeLight, themeDark} from './assets/styles/themes'
 
 export const Context = React.createContext();
 
@@ -13,12 +16,16 @@ function App() {
   const [isWriting, setIsWriting] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
-  const [ExamModule, setExamModule] = useState('Academic');
+  const [ExamModule, setExamModule] = useState("Academic");
   const [ExamModuleTaskNumber, setExamModuleTaskNumber] = useState(1);
 
-  const [userInput1, setUserInput1] = useState('');
-  const [userInput2, setUserInput2] = useState('');
+  const [userInput1, setUserInput1] = useState("");
+  const [userInput2, setUserInput2] = useState("");
+  const [theme, setTheme] = useState(themeLight)
+
+
   return (
+    <ThemeProvider theme={theme}>
       <Context.Provider
         value={{
           userInput1,
@@ -31,9 +38,12 @@ function App() {
           setExamModuleTaskNumber,
           setHasTask,
           setIsFinished,
-          setIsWriting
+          setIsWriting,
+          theme,
+          setTheme
         }}
       >
+        <GlobalStyleNormalizeCSS />
         {!hasTask && <TaskSelector />}
         {isWriting && (
           <div className="body">
@@ -43,6 +53,7 @@ function App() {
         )}
         {isFinished && <PDFView className="PdfContainer" />}
       </Context.Provider>
+    </ThemeProvider>
   );
 }
 

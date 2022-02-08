@@ -1,6 +1,6 @@
-import {  useContext } from 'react';
-import { Context } from '../../../App';
-import style from '../Header.module.css'
+import { useContext } from "react";
+import { Context } from "../../App";
+import { FinishTaskButton } from "./styled";
 
 function FinishButton() {
   const { setIsFinished, setIsWriting } = useContext(Context);
@@ -9,9 +9,9 @@ function FinishButton() {
     setIsFinished(true);
   }
   return (
-    <button className={`${style.button} ${style.finish}`} onClick={() => finishTest()}>
+    <FinishTaskButton onClick={() => finishTest()}>
       Finish test
-    </button>
+    </FinishTaskButton>
   );
 }
 

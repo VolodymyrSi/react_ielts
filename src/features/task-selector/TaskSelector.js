@@ -1,7 +1,7 @@
-import { useContext } from 'react';
-import Swal from 'sweetalert2';
-import { Context } from '../../../App';
-import style from './TaskSelector.module.css'
+import { useContext } from "react";
+import Swal from "sweetalert2";
+import { Context } from "../../App";
+import { Container } from "./styled";
 
 function TaskSelector() {
   const { setExamModule, setExamModuleTaskNumber, setHasTask, setIsWriting } =
@@ -11,23 +11,23 @@ function TaskSelector() {
     const inputOptions = new Promise((resolve) => {
       setTimeout(() => {
         resolve({
-          1: '1',
-          2: '2',
-          3: '3',
-          4: '4'
+          1: "1",
+          2: "2",
+          3: "3",
+          4: "4",
         });
       }, 1000);
     });
 
     const { value: ExamModuleTaskNumber } = await Swal.fire({
-      title: 'Select task number',
-      input: 'radio',
+      title: "Select task number",
+      input: "radio",
       inputOptions: inputOptions,
       inputValidator: (value) => {
         if (!value) {
-          return 'You need to choose something!';
+          return "You need to choose something!";
         }
-      }
+      },
     });
 
     if (ExamModuleTaskNumber) {
@@ -41,21 +41,21 @@ function TaskSelector() {
     const inputOptions = new Promise((resolve) => {
       setTimeout(() => {
         resolve({
-          General: 'General',
-          Academic: 'Academic'
+          General: "General",
+          Academic: "Academic",
         });
       }, 1000);
     });
 
     const { value: module } = await Swal.fire({
-      title: 'Select module',
-      input: 'radio',
+      title: "Select module",
+      input: "radio",
       inputOptions: inputOptions,
       inputValidator: (value) => {
         if (!value) {
-          return 'You need to choose something!';
+          return "You need to choose something!";
         }
-      }
+      },
     });
 
     if (module) {
@@ -64,11 +64,9 @@ function TaskSelector() {
     }
   }
   return (
-    <div className={style.container}>
-      <button className={style.item} onClick={() => chooseModule()}>
-        Take a test
-      </button>
-    </div>
+    <Container>
+      <button onClick={() => chooseModule()}>Take a test</button>
+    </Container>
   );
 }
 

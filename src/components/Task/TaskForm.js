@@ -1,22 +1,23 @@
 import { countWords } from "../utils/helper";
+import { StyledTaskForm, TextArea } from "./styled";
 
 function TaskForm(props) {
   const handleChange = (e) => {
     props.setInput(e.target.value);
   };
   return (
-    <div className="taskForm">
-      <textarea
+    <StyledTaskForm>
+      <TextArea
         spellCheck="false"
         className="textarea"
         id="textarea"
         value={props.value}
         onChange={handleChange}
-      ></textarea>
+      ></TextArea>
       <div>
         <p>Word count: {countWords(props.input)}</p>
       </div>
-    </div>
+    </StyledTaskForm>
   );
 }
 
